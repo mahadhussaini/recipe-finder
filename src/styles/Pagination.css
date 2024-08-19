@@ -1,0 +1,58 @@
+/* Pagination.css */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+}
+
+.pagination-button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem; /* Adjust font size for readability */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 36px; /* Ensures buttons have a minimum width */
+  text-align: center; /* Centers text in button */
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.pagination-button:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Media Queries for Mobile Devices */
+
+/* Tablets and Small Screens */
+@media (max-width: 768px) {
+  .pagination-button {
+    font-size: 0.75rem; /* Adjust font size for smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    margin: 0 4px; /* Reduce margin to fit more buttons */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .pagination-button {
+    font-size: 0.625rem; /* Further adjust font size */
+    padding: 6px 10px; /* Further reduce padding */
+    margin: 0 2px; /* Minimal margin for tight spaces */
+  }
+}
